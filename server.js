@@ -4,12 +4,12 @@
 var server = http.createServer(function(req, res) {
 
     if (req.url === "/") {
-    var IP = req.connection.remoteAddress,
+    var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress || req.socket.remoteAddress || req.connection.socket.remoteAddress;
         language = /^.*?(\,)/.exec(req.headers["accept-language"])[0].replace(/\,/, ""),
-        OS = /\((.*)\)/.exec(req.headers["user-agent"])[0].replace(/\(/, "").replace(/\)/, "");
+        os = /\((.*)\)/.exec(req.headers["user-agent"])[0].replace(/\(/, "").replace(/\)/, "");
 
     res.writeHead(200, { 'content-type': 'text/plain' });
-    res.end(JSON.stringify({ip: IP, language: language, software: OS}));
+    res.end(JSON.stringify({ip: ip, language: language, software: os}));
     }
 });
 
