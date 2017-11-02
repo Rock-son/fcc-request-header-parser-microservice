@@ -1,0 +1,23 @@
+{
+  "name": "fcc-request-header-parser-microservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rock-son/fcc-request-header-parser-microservice.git"
+  },
+  "author": "RZ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rock-son/fcc-request-header-parser-microservice/issues"
+  },
+  "homepage": "https://github.com/Rock-son/fcc-request-header-parser-microservice#readme",
+  "dependencies": {
+    "ua-parser-js": "^0.7.17"
+  }
+}
