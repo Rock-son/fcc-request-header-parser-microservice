@@ -19,5 +19,8 @@
   "homepage": "https://github.com/Rock-son/fcc-request-header-parser-microservice#readme",
   "dependencies": {
     "ua-parser-js": "^0.7.17"
+  },
+  "engines": {
+    "node": "^6.1.1"
   }
 }
