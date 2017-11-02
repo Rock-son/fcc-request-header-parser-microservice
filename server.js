@@ -1,5 +1,4 @@
-var http = require("http"),
-    fs = require("fs");
+var http = require("http");
 
 
 var server = http.createServer(function(req, res) {
@@ -11,7 +10,8 @@ var server = http.createServer(function(req, res) {
         OS = req.headers["user-agent"];
 
     res.writeHead(200, { 'content-type': 'text/plain' });
-    res.end(JSON.stringify({ip: "test", language: language, software: OS}));
+    res.end("This is stupid!");
+    //res.end(JSON.stringify({ip: "test", language: language, software: OS}));
 });
 
 
